@@ -60,7 +60,7 @@ After training, the tolerance can be **lowered at inference time** for real-time
 ### 3. Scalable and Invertible Normalizing Flows
 Continuous transformations simplify the change-of-variables formula. The expensive log-determinant collapses to a **trace**:
 
-$$\underbrace{\log\left|\det \frac{\partial f}{\partial z_0}\right|}_{O(D^3)\text{ — standard NF}} \;\longrightarrow\; \underbrace{-\operatorname{tr}\left(\frac{df}{dz(t)}\right)}_{O(D)\text{ — CNF}}$$
+$$\underbrace{\log\left|\det \frac{\partial f}{\partial z_0}\right|}_{O(D^3)\text{ — standard NF}} \;\longrightarrow\; \underbrace{-\text{tr}\left(\frac{df}{dz(t)}\right)}_{O(D)\text{ — CNF}}$$
 
 This is formalized in **Theorem 1 (Section 4)**: the Instantaneous Change of Variables.
 
